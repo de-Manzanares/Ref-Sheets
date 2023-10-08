@@ -1,0 +1,189 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{esvect}
+\usepackage{hyperref}
+
+\begin{document}
+
+    \tableofcontents
+    \pagebreak
+
+    \begin{center}
+        \subsection*{Motion}
+        \addcontentsline{toc}{section}{Motion}
+    \end{center}
+
+    \medskip
+    \subsubsection*{Projectile Motion}
+    \addcontentsline{toc}{subsection}{Projectile Motion}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    The equations on the left are the standard kinematic equations; they express motion of constant acceleration on a straight line.
+    The equations on the right are adapted to express motion on a parabola.
+    Projectile motion can be defined as follows:
+    An object is launched with initial velocity $\vv{v}_{0}$.
+    Horizontal acceleration is zero, and vertical acceleration is $-g$, the downward force of gravity.
+    $\theta_0$ is the initial launch angle with respect to the positive $x$-axis.
+
+    \vspace{-1.4em}
+    \begin{minipage}[t]{0.4\linewidth}
+        \begin{align*}
+            &v=v_0+at \\
+            &x=x_0+v_0 t+\tfrac{1}{2}at^2 \\
+            &v^2=v_0^2+2a\left(x-x_0\right) \\
+            &x=x_0+\tfrac{1}{2}\left(v_0+v\right)t \\
+            &x=x_0+v t-\tfrac{1}{2}at^2
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+        \begin{align*}
+            &x=x_0+\left(v_0\cos\theta_0\right)t \\
+            &y=y_0+\left(v_0\sin\theta_0\right)t-\tfrac{1}{2}gt^2 \\
+            &v_y=v_0\sin\theta_0-gt \\
+            &v_y^2=\left(v_0\sin\theta_0\right)^2-2g\left(y-y_0\right)
+        \end{align*}
+    \end{minipage}
+
+    \vspace{1.2em}
+    \smallskip\noindent
+    The path trajectory of a projectile is parabolic and can be expressed as
+    \[
+        y=\left(\tan\theta_0\right)x-\frac{gx^2}{2\left(v_0\cos\theta_0\right)^2}
+    \]
+
+    \smallskip\noindent
+    If $x_0 = y_0 = 0$, the object's horizontal range $R$ can be expressed as
+    \[
+        R = \frac{v_0^2}{g}\sin2\theta_0
+    \]
+
+    \smallskip
+    \subsubsection*{Relative Motion}
+    \addcontentsline{toc}{subsection}{Relative Motion}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    A frame of reference is an arbitrary set of coordinate axes about which we make measurements.
+    A passenger on a train is not moving relative to their seat, but they may be moving very quickly from the perspective of a tree next to the train tracks.
+    Given two frames of reference, A and B, with constant velocity; the velocity of a particle P with respect to A is equal to the velocity P with respect to B, plus the velocity of B with respect to A .
+    \@.   \[
+              \vv{v}_{\text{PA}} = \vv{v}_{\text{PB}} + \vv{v}_{\text{BA}}
+    \]
+
+    \smallskip\noindent
+    The acceleration is equal from either frame of reference.
+    \[
+        \vv{a}_{\text{PA}} = \vv{a}_{\text{PB}}
+    \]
+
+    \begin{center}
+        \subsection*{Force and Motion}
+        \addcontentsline{toc}{section}{Force and Motion}
+    \end{center}
+
+    \medskip
+    \subsubsection*{Newton's Laws}
+    \addcontentsline{toc}{subsection}{Newton's Laws}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \medskip
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{p{0.15\linewidth} p{0.4\linewidth} p{.3\linewidth}}
+        First Law:
+        & If there is no net force a body, it cannot change its velocity.
+        & $\vv{F}_{\text{net}} = 0 \rightarrow \vv{a}=0$ \\
+        Second Law:
+        & The net force $\vv{F}_{\text{net}}$ on a body is the product of its mass $m$ and its acceleration $\vv{a}$.
+        &$\vv{F}_{\text{net}} = m\vv{a}$\\
+        Third Law:
+        & Equal and opposite reactions.
+        &$\vv{F}_{\text{BC}} = - \vv{F}_{\text{CB}}$
+    \end{tabular}
+
+    \smallskip
+    \subsubsection*{Friction}
+    \addcontentsline{toc}{subsection}{Friction}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    The force of static friction $\vv{f}_s$ has a maximum value $f_{s\text{, max}}$ given by
+    \[
+        f_{s\text{, max}} = \mu_s F_N
+    \]
+
+    \smallskip\noindent
+    where $\mu_s$ is the coefficient of static friction and $F_N$ is the magnitude of the normal force.
+    If the component of $\vv{F}$ parallel to the surface exceeds $f_{s\text{, max}}$, the body will begin to slide.
+    Once the body begins to slide on the surface, the frictional force decreases to a constant value $f_k$ given by
+    \[
+        f_k=\mu_k F_N
+    \]
+
+    \smallskip\noindent
+    where $\mu_k$ is the coefficient of kinetic friction.
+    Kinetic friction is less forceful than static friction.
+
+    \smallskip
+    \subsubsection*{Drag Force}
+    \addcontentsline{toc}{subsection}{Drag Force}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    A body that is moving relative to a surrounding fluid experiences a drag force $\vv{D}$.
+    The force points in the direction in which the fluid flows relative to the body, i.e., opposite of the body's motion relative to the fluid.
+    The magnitude of $\vv{D}$ can be expressed as
+    \[
+        D=\tfrac{1}{2}C\rho Av^2
+    \]
+
+    \vspace{.2em}
+    \smallskip\noindent
+    where $C$ is the drag coefficient, $\rho$ is the fluid density, and $A$ is the effective cross-sectional area of the body, and $v$ is the relative speed.
+
+    \smallskip
+    \subsubsection*{Terminal Speed}
+    \addcontentsline{toc}{subsection}{Terminal Speed}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    As an object in free fall builds speed, there comes a point where the magnitude of the drag force ${D}$ becomes equal to that of the force of gravity $F_g$.
+    The object cannot fall any faster and is said to have reached terminal velocity $v_t$ expressed as
+    \[
+        v_t = \sqrt{\frac{2F_g}{C\rho A}}
+    \]
+
+    \smallskip
+    \subsubsection*{Uniform Circular Motion}
+    \addcontentsline{toc}{subsection}{Uniform Circular Motion}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    An object traveling along a circle of radius $R$ at constant speed $v$ is said to be in uniform circular motion.
+    Speed is constant, therefore acceleration is constant.
+    The constant magnitude of acceleration $\vv{a}$ can be expressed as
+    \[
+        a=\frac{v^2}{R} \quad \text{or} \quad F_c=\frac{mv^2}{R}
+    \]
+
+    \smallskip\noindent
+    Where $F_c$ is the magnitude of the centripetal force.
+    Acceleration $\vv{a}$ and force $\vv{F_c}$ are always directed toward the center of the circle.
+    This is what it means for a force to be centripetal; it is directed toward a center around which an object is moving.
+
+    \medskip\noindent
+    The time for the object to complete the circle is
+    \[
+        T = \frac{2\pi r}{v}
+    \]
+
+\end{document}
