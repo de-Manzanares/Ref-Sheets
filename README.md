@@ -9,9 +9,11 @@ from [https://de-manzanares.github.io/Ref-Sheets/](https://de-manzanares.github.
 
 ## Contents
 
-- Circuits I &nbsp; [ [PDF](https://de-manzanares.github.io/Ref-Sheets/Circuits_I.pdf) ] [ [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Circuits%20I) ]
-- Digital Logic Design I &nbsp; [ [PDF](https://de-manzanares.github.io/Ref-Sheets/Digital_Logic_Design_I.pdf) ] [ [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Digital%20Logic%20Design%20I) ]
-- Physics I - Newtonian Mechanics &nbsp; [ [PDF](https://de-manzanares.github.io/Ref-Sheets/Physics_I___Newtonian_Mechanics.pdf) ] [ [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Physics%20I%20-%20Newtonian%20Mechanics) ]
+| Subject                         | Document                                                                              | Code                                                                                                    |
+|---------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Circuits I                      | [PDF](https://de-manzanares.github.io/Ref-Sheets/Circuits_I.pdf)                      | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Circuits%20I)                            |
+| Digital Logic Design I          | [PDF](https://de-manzanares.github.io/Ref-Sheets/Digital_Logic_Design_I.pdf)          | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Digital%20Logic%20Design%20I)            |
+| Physics I - Newtonian Mechanics | [PDF](https://de-manzanares.github.io/Ref-Sheets/Physics_I___Newtonian_Mechanics.pdf) | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Physics%20I%20-%20Newtonian%20Mechanics) |
 
 ## Contributing
 
@@ -20,5 +22,6 @@ If you have any feedback or have suggestions, feel free to create an issue or a 
 ## License
 
 Creative Commons BY-NC-SA
+
 - [Human Readable](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
 - [Lawyer Readable](LICENSE.md)
