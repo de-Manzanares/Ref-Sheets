@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{multicol}
 
 
 \begin{document}
@@ -179,14 +180,14 @@
 
     \begin{center}
         \begin{tabular}{c c c}
-            $A B C$  & Minterms             & Maxterms                          \\
-            0 0 0 0  & $A'B'C'D' = m_0$     & $A + B + C + D = M_0$             \\
-            0 0 0 1  & $A'B'C'D = m_1$      & $A + B + C + D' = M_1$            \\
-            0 0 1 0  & $A'B'CD' = m_2$      & $A + B + C' + D = M_2$            \\
-            $\vdots$ & $\vdots$             & $\vdots$                          \\
-            1 1 0 1  & $ABC'D = m{13}$      & $A' + B' + C + D' = M_{13}$       \\
-            1 1 1 0  & $ABCD' = m_{14} $    & $A' + B' + C' + D = M_{14}$       \\
-            1 1 1 1  & $ABCD = m_{15} $     & $A' + B' + C' + D' = M_{15}$
+            $A B C$  & Minterms          & Maxterms                     \\
+            0 0 0 0  & $A'B'C'D' = m_0$  & $A + B + C + D = M_0$        \\
+            0 0 0 1  & $A'B'C'D = m_1$   & $A + B + C + D' = M_1$       \\
+            0 0 1 0  & $A'B'CD' = m_2$   & $A + B + C' + D = M_2$       \\
+            $\vdots$ & $\vdots$          & $\vdots$                     \\
+            1 1 0 1  & $ABC'D = m{13}$   & $A' + B' + C + D' = M_{13}$  \\
+            1 1 1 0  & $ABCD' = m_{14} $ & $A' + B' + C' + D = M_{14}$  \\
+            1 1 1 1  & $ABCD = m_{15} $  & $A' + B' + C' + D' = M_{15}$
         \end{tabular}
     \end{center}
 
@@ -198,5 +199,78 @@
         f=\Sigma\,m(0,1,4,7,8,9,14) = m_0+m_1+m_4+m_7+m_8+m_9+m_{14}    \\[.5em]
         f=\Pi\,M(2,3,5,6,10,11,12,13,15)=M_2 M_3 M_5 M_6 M_{10}M_{11}M_{12}M_{13}M_{15}
     \end{gather*}
+
+    \pagebreak
+    \begin{center}
+        \subsection*{Truth Tables}
+        \addcontentsline{toc}{section}{Truth Tables}
+    \end{center}
+    \vspace{4em}
+    \begin{multicols}{2}
+
+        \begin{center}
+
+            \subsubsection*{NAND}
+            \vspace{1em}
+            \begin{tabular}{cc|c}
+                X \hspace{1em} & Y \hspace{1em} & \hspace{1em}Z \\
+                \hline
+                0 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}1 \\
+                0 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}1 \\
+                1 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}1 \\
+                1 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}0 \\
+            \end{tabular}
+
+            \vspace{2em}
+            $Z = (XY)'$
+
+            \vspace{4em}
+            \subsubsection*{XOR}
+            \vspace{1em}
+            \begin{tabular}{cc|c}
+                X \hspace{1em} & Y \hspace{1em} & \hspace{1em}Z \\
+                \hline
+                0 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}0 \\
+                0 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}1 \\
+                1 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}1 \\
+                1 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}0 \\
+            \end{tabular}
+
+            \vspace{2em}
+            $Z=X'Y+XY'$
+        \end{center}
+
+        \columnbreak
+        \begin{center}
+            \subsubsection*{NOR}
+            \vspace{1em}
+            \begin{tabular}{cc|c}
+                X \hspace{1em} & Y \hspace{1em} & \hspace{1em}Z \\
+                \hline
+                0 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}1 \\
+                0 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}0 \\
+                1 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}0 \\
+                1 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}0 \\
+            \end{tabular}
+
+            \vspace{2em}
+            $Z=(X+Y)'$
+
+            \vspace{4em}
+            \subsubsection*{XNOR}
+            \vspace{1em}
+            \begin{tabular}{cc|c}
+                X \hspace{1em} & Y \hspace{1em} & \hspace{1em}Z \\
+                \hline
+                0 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}1 \\
+                0 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}0 \\
+                1 \hspace{1em} & 0 \hspace{1em} & \hspace{1em}0 \\
+                1 \hspace{1em} & 1 \hspace{1em} & \hspace{1em}1 \\
+            \end{tabular}
+
+            \vspace{2em}
+            $Z=XY+X'Y'$
+        \end{center}
+    \end{multicols}
 
 \end{document}
