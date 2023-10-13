@@ -53,6 +53,7 @@
     Passive sign convention dictates that when current flows into the positive terminal of an element $p = +vi$ and when current flows into the negative terminal of an element $p = -vi$.
     An element with positive power is absorbing power from the circuit; an element with negative power is supplying power to the circuit.
 
+    \vspace{4em}
     \smallskip
     \subsubsection*{Problem-Solving}
     \addcontentsline{toc}{subsection}{Problem-Solving}
@@ -216,7 +217,7 @@
     \begin{enumerate}[label=\arabic*.]
         \item Select a reference node and assign voltage variables to the remaining nodes.
         \item If there is a voltage source between the reference node and another node, the non-reference node's voltage is equal to that of the voltage source.
-        \item If there is a voltage source between two non-reference nodes, those two nodes form a supernode, so we and apply both KCL and KVL.
+        \item If there is a voltage source between two non-reference nodes, those two nodes form a supernode, so we and apply both KCL and KVL\@.
         \item Apply KCL to each node with an unknown voltage.
         \item Use Ohm's law to express the branch currents in terms of voltage.
         In a resistor, current flows from a higher potential to a lower potential.
@@ -245,6 +246,53 @@
         \item Apply KVL to each of the meshes, using Ohm's law to express the voltages in terms of mesh currents.
         \item Solve the resulting system of equations.
     \end{enumerate}
+
+    \pagebreak
+    \begin{center}
+        \subsection*{Circuit Theorems}
+        \addcontentsline{toc}{section}{Circuit Theorems}
+    \end{center}
+
+    \medskip
+    \subsubsection*{Linearity}
+    \addcontentsline{toc}{subsection}{Linearity}
+    \vspace{-1em}
+    \rule{\linewidth}{0.1mm}
+
+    \smallskip
+    \subsubsection*{Principle of Superposition}
+    \addcontentsline{toc}{subsection}{Principle of Superposition}
+    \vspace{-1em}
+    \rule{\linewidth}{0.1mm}
+
+    \smallskip
+    \subsubsection*{Source Transformation}
+    \addcontentsline{toc}{subsection}{Source Transformation}
+    \vspace{-1em}
+    \rule{\linewidth}{0.1mm}
+
+    \smallskip\noindent
+    Source transformation to creates an equivalent circuit by transforming a voltage source into a current source or vice versa.
+    This can be applied to independent and dependent sources.
+
+    A voltage source in series with a resistor may be replaced by a current source in parallel with that resistor.
+    A current source in parallel with a resistor may be replaced by a voltage source in series with that resistor.
+
+    When transforming voltage to current, the current flows out of the positive terminal.
+    When transforming current to voltage, the resistor is placed on the positive side of the voltage source.
+    Source transformation cannot be applied to a short circuit or open circuit.
+    Following Ohm's law, the transformed source takes on a value as defined below.
+
+    \[
+        v_s = i_s R     \qquad   i_s = \frac{v_s}{R}
+    \]
+
+    \smallskip
+    \subsubsection*{Thevenin's Theorem}
+    \addcontentsline{toc}{subsection}{Thevenin's Theorem}
+    \vspace{-1em}
+    \rule{\linewidth}{0.1mm}
+
 
 
 
