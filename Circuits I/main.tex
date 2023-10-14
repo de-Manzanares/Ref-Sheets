@@ -287,13 +287,41 @@
         v_s = i_s R     \qquad   i_s = \frac{v_s}{R}
     \]
 
+    \pagebreak
     \smallskip
     \subsubsection*{Thevenin's Theorem}
     \addcontentsline{toc}{subsection}{Thevenin's Theorem}
     \vspace{-1em}
     \rule{\linewidth}{0.1mm}
 
+    \smallskip\noindent
+    From the perspective of two terminals, any linear circuit behaves as though it comprises only a voltage source in series with a resistor.
 
+    Thevenin equivalent resistance ($R_\text{Th}$) is found by removing all independent voltage and current sources from a circuit, then calculating the equivalent resistance.
+    If there are dependent sources, leave them in place and solve for the equivalent resistance by injecting 1V (for easy calculations) at the target terminals.
 
+    Thevenin equivalent voltage ($V_\text{Th}$) is found by solving for the voltage between the target terminals, i.e., the voltage at the open circuit.
+    The process of doing so depends on the circuit in question.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{TheveninEquivalent}
+        \vspace{-1em}
+        \caption{Thevenin Equivalent Circuit. \\
+        Source:
+        \href{https://github.com/de-Manzanares}
+        {\color{blue}\underline{de-Manzanares}}
+        (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en}{\color{blue} \underline{CC BY-NC-SA 4.0}}).}
+
+        \label{fig:thev-eq}
+    \end{figure}
+
+    \smallskip\noindent
+    Following Ohm's law and the principle of voltage division, the load characteristics (voltage, current, and resistance) are related to a circuit's Thevenin equivalents as follows:
+    \[
+        I_L = \frac{V_{\text{Th}}}{R_{\text{Th}}+R_L}
+        \qquad
+        V_L = R_L I_L = \frac{R_L}{R_{\text{Th}}+R_L}\,V_{\text{Th}}
+    \]
 
 \end{document}
