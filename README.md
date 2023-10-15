@@ -9,11 +9,12 @@ from [https://de-manzanares.github.io/Ref-Sheets/](https://de-manzanares.github.
 
 ## Contents
 
-| Subject                         | Document                                                                              | Code                                                                                                    |
-|---------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Circuits I                      | [PDF](https://de-manzanares.github.io/Ref-Sheets/Circuits_I.pdf)                      | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Circuits%20I)                            |
-| Digital Logic Design I          | [PDF](https://de-manzanares.github.io/Ref-Sheets/Digital_Logic_Design_I.pdf)          | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Digital%20Logic%20Design%20I)            |
-| Physics I - Newtonian Mechanics | [PDF](https://de-manzanares.github.io/Ref-Sheets/Physics_I___Newtonian_Mechanics.pdf) | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Physics%20I%20-%20Newtonian%20Mechanics) |
+| Subject                               | Document                                                                                    | Code                                                                                                          |
+|---------------------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Calculus III - Multivariable Calculus | [PDF](https://de-manzanares.github.io/Ref-Sheets/Calculus_III___Multivariable_Calculus.pdf) | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Calculus%20III%20-%20Multivariable%20Calculus) |
+| Circuits I                            | [PDF](https://de-manzanares.github.io/Ref-Sheets/Circuits_I.pdf)                            | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Circuits%20I)                                  |
+| Digital Logic Design I                | [PDF](https://de-manzanares.github.io/Ref-Sheets/Digital_Logic_Design_I.pdf)                | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Digital%20Logic%20Design%20I)                  |
+| Physics I - Newtonian Mechanics       | [PDF](https://de-manzanares.github.io/Ref-Sheets/Physics_I___Newtonian_Mechanics.pdf)       | [Source](https://github.com/de-Manzanares/Ref-Sheets/tree/main/Physics%20I%20-%20Newtonian%20Mechanics)       |
 
 ## Contributing
 
