@@ -7,6 +7,14 @@
 \usepackage{caption}
 \graphicspath{ {./} }
 
+\newcommand{\mysubsection}[1]{
+    \subsubsection*{#1}
+    \addcontentsline{toc}{subsection}{#1}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+    \par
+}
+
 \captionsetup{font=small,labelfont=bf,justification=centering,skip=5pt}
 
 \begin{document}
@@ -254,16 +262,25 @@
     \end{center}
 
     \medskip
-    \subsubsection*{Linearity}
-    \addcontentsline{toc}{subsection}{Linearity}
-    \vspace{-1em}
-    \rule{\linewidth}{0.1mm}
+    \mysubsection{Linearity and the Principle of Superposition}
 
-    \smallskip
-    \subsubsection*{Principle of Superposition}
-    \addcontentsline{toc}{subsection}{Principle of Superposition}
-    \vspace{-1em}
-    \rule{\linewidth}{0.1mm}
+    \smallskip\noindent
+    The following theorems apply only to linear circuits.
+    Basically, a linear circuit is a circuit whose output voltage and current are linear functions of its input voltage and current.
+    More specifically, a linear circuit is one that follows the principle of superposition, i.e.\ has the characteristics of additivity and homogeneity.
+
+    Additivity: the voltage across and current through an element is equal to the algebraic sum of each voltage and current source applied to the element individually.
+
+    Homogeneity: scaling the input sources by a factor $k$ scales the output by a factor $k$.
+    \vspace{-.5em}
+    \begin{gather*}
+        f(x_1+\dots+x_n) = f(x_1)+\dots+f(x_n)  \\[.3em]
+        f(k\,x)=k\,f(x)
+    \end{gather*}
+
+    \smallskip\noindent
+    The principal of superposition can be directly applied to find voltages or currents of a given element without solving the rest of the circuit; however, it is often times mathematically more simple to solve the whole circuit.
+
 
     \smallskip
     \subsubsection*{Source Transformation}
@@ -272,7 +289,7 @@
     \rule{\linewidth}{0.1mm}
 
     \smallskip\noindent
-    Source transformation to creates an equivalent circuit by transforming a voltage source into a current source or vice versa.
+    Source transformation creates an equivalent circuit by transforming a voltage source into a current source or vice versa.
     This can be applied to independent and dependent sources.
 
     A voltage source in series with a resistor may be replaced by a current source in parallel with that resistor.
