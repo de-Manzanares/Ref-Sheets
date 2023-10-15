@@ -5,6 +5,15 @@
 \usepackage{esvect}
 \usepackage{hyperref}
 
+\newcommand{\mysubsection}[1]{
+    \smallskip
+    \subsubsection*{#1}
+    \addcontentsline{toc}{subsection}{#1}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+    \par
+}
+
 \begin{document}
 
     \pagenumbering{roman}
@@ -188,7 +197,7 @@
         T = \frac{2\pi R}{v}
     \]
 
-    \pagebreak
+    \bigskip
     \begin{center}
         \subsection*{Energy and Work}
         \addcontentsline{toc}{section}{Energy and Work}
@@ -236,6 +245,37 @@
     \[
         W_a = -W_g
     \]
+
+    \smallskip
+    \subsubsection*{Variable Force and Work}
+    \addcontentsline{toc}{subsection}{Variable Force and Work}
+    \vspace{-1em}
+    \rule{\linewidth}{.1mm}
+
+    \smallskip\noindent
+    Springs are a special case of a variable force.
+    \begin{gather*}
+        \vv{F}_s=-k\vv{d}   \\
+        F_x=-kd             \\
+        W_s=\int_{x_i}^{x_f} F_x \,dx = \frac{k}{2}\left(x_i^2-x_f^2\right)     \\
+        \Delta K = K_f - K_i = W_a + W_s
+    \end{gather*}
+
+    \smallskip\noindent
+    General variable force
+    \begin{gather*}
+        W = \int_{x_i}^{x_f} F_x\,dx + \int_{y_i}^{y_f} F_y\,dy + \int_{z_i}^{z_f} F_z\,dz
+    \end{gather*}
+
+    \mysubsection{Power}
+
+    \smallskip\noindent
+    Power is the rate of change of work with respect to time.
+    \begin{gather*}
+        P=\frac{dw}{dt}                     \\
+        P=\vv{F}\cdot\vv{v}=Fv\cos\phi      \\
+        P_{avg} = \frac{W}{\Delta t}
+    \end{gather*}
 
 
 \end{document}
