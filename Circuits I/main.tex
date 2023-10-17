@@ -261,7 +261,7 @@
         \addcontentsline{toc}{section}{Circuit Theorems}
     \end{center}
 
-    \medskip
+    \smallskip
     \mysubsection{Linearity and the Principle of Superposition}
 
     \smallskip\noindent
@@ -289,14 +289,13 @@
     \rule{\linewidth}{0.1mm}
 
     \smallskip\noindent
-    Source transformation creates an equivalent circuit by transforming a voltage source into a current source or vice versa.
-    This can be applied to independent and dependent sources.
-
     A voltage source in series with a resistor may be replaced by a current source in parallel with that resistor.
     A current source in parallel with a resistor may be replaced by a voltage source in series with that resistor.
-
     When transforming voltage to current, the current flows out of the positive terminal.
     When transforming current to voltage, the resistor is placed on the positive side of the voltage source.
+    This can be applied to both independent and dependent sources.
+    Figure~\ref{fig:thev-norton-transf} shows these configurations.
+
     Source transformation cannot be applied to a short circuit or open circuit.
     Following Ohm's law, the transformed source takes on a value as defined below.
 
@@ -304,41 +303,62 @@
         v_s = i_s R     \qquad   i_s = \frac{v_s}{R}
     \]
 
-    \pagebreak
     \smallskip
-    \subsubsection*{Thevenin's Theorem}
-    \addcontentsline{toc}{subsection}{Thevenin's Theorem}
+    \subsubsection*{Thevenin's Theorem and Norton's Theorem}
+    \addcontentsline{toc}{subsection}{Thevenin's Theorem and Norton's Theorem}
     \vspace{-1em}
     \rule{\linewidth}{0.1mm}
 
     \smallskip\noindent
-    From the perspective of two terminals, any linear circuit behaves as though it comprises only a voltage source in series with a resistor.
+    From the perspective of two terminals, any linear circuit behaves as though it comprises only a voltage source in series with a resistor (Thevenin equivalent circuit) or comprises only a current source in parallel with a resistor (Norton equivalent circuit).
 
-    Thevenin equivalent resistance ($R_\text{Th}$) is found by removing all independent voltage and current sources from a circuit, then calculating the equivalent resistance.
-    If there are dependent sources, leave them in place and solve for the equivalent resistance by injecting 1V (for easy calculations) at the target terminals.
+    The Thevenin or Norton equivalent resistance ($R_\text{Th} = R_\text{N}$) are found by removing all independent voltage and current sources from a circuit, then calculating the equivalent resistance.
+    If there are dependent sources, leave them in place and solve for the equivalent resistance by injecting $v_0$ = 1\,V or $i_0$ = 1\,A (for easy calculations) at the target terminals.
+    Solve for the resulting current or voltage, and $R_\text{Th} = R_N = v_0/i_0$
 
     Thevenin equivalent voltage ($V_\text{Th}$) is found by solving for the voltage between the target terminals, i.e., the voltage at the open circuit.
-    The process of doing so depends on the circuit in question.
+    Norton equivalent current ($I_N$) is found by solving for the current between the terminals if they were to be short-circuited.
+
+    Figure~\ref{fig:thev-norton-transf} shows the end result of simplifying a linear circuit to its Thevenin equivalent or Norton equivalent.
+    It is worthwhile to note that each is a source transformation of the other.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.5\textwidth]{TheveninEquivalent}
-        \vspace{-1em}
-        \caption{Thevenin Equivalent Circuit. \\
+        \includegraphics[width=.7\textwidth]{theveninNortonTransform}
+        \caption{Thevenin and Norton Equivalent Circuits. \\
         Source:
         \href{https://github.com/de-Manzanares}
         {\color{blue}\underline{de-Manzanares}}
         (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en}{\color{blue} \underline{CC BY-NC-SA 4.0}}).}
 
-        \label{fig:thev-eq}
+        \label{fig:thev-norton-transf}
     \end{figure}
 
     \smallskip\noindent
-    Following Ohm's law and the principle of voltage division, the load characteristics (voltage, current, and resistance) are related to a circuit's Thevenin equivalents as follows:
-    \[
+    Following Ohm's law, the principle of voltage division, and the principle of current division, the load characteristics (voltage, current, and resistance) are related to a circuit's Thevenin and Norton equivalents as follows:
+    \begin{gather*}
         I_L = \frac{V_{\text{Th}}}{R_{\text{Th}}+R_L}
         \qquad
-        V_L = R_L I_L = \frac{R_L}{R_{\text{Th}}+R_L}\,V_{\text{Th}}
-    \]
+        V_L = I_L R_L = \frac{V_\text{Th}R_L}{R_{\text{Th}}+R_L}    \\[.5em]
+        I_L = \frac{R_L^{-1}}{R_N^{-1}+R_L^{-1}}\,I_N
+        \qquad
+        V_L = I_L R_L = \frac{I_N}{R_N^{-1} + R_L^{-1}}
+    \end{gather*}
+
+    \medskip
+    \noindent
+    If a circuit contains dependent sources it is possible for the Thevenin equivalent resistance to be negative.
+    This means that the circuit is supplying power to the terminals.
+
+    \smallskip
+    \mysubsection{Power Transfer}
+    \smallskip
+    \noindent
+    Solving $dp/dR_L = 0$ gives $R_L=R_\text{Th}$, meaning that maximum power transfer occurs when the load resistance is equal to the Thevenin equivalent resistance.
+    The following equations express power of a circuit for any $R_L$ and for the special case $R_L = R_\text{Th}$, respectively.
+    \begin{gather*}
+        p=\left( \frac{V_{\text{Th}}}{R_{\text{Th}}+R_L} \right) ^2 R_L \qquad
+        p_\text{max} = \frac{V_\text{Th}^2}{4R_\text{Th}}
+    \end{gather*}
 
 \end{document}
