@@ -253,28 +253,69 @@
     \rule{\linewidth}{.1mm}
 
     \smallskip\noindent
-    Springs are a special case of a variable force.
-    \begin{gather*}
-        \vv{F}_s=-k\vv{d}   \\
-        F_x=-kd             \\
-        W_s=\int_{x_i}^{x_f} F_x \,dx = \frac{k}{2}\left(x_i^2-x_f^2\right)     \\
-        \Delta K = K_f - K_i = W_a + W_s
-    \end{gather*}
+    Springs are a special case of variable force.
+    In a system where a spring has one fixed end and one free end, the spring exerts a force proportional to the displacement of its free end.
+    Hooke's Law encapsulates this behavior:
+    \[
+        \vv{F}_s=-k\vv{d}
+    \]
+    \noindent
+    where $\vv{d}$ is the displacement of the spring's free end from its position at rest (neither compressed nor stretched), and $k$ is the constant of proportionality, the spring constant.
+    Notice the $(-)$ in the expression; this is because the spring force always acts in the opposite direction of displacement.
+
+    \medskip\noindent
+    The work done by a spring as it moves from one position to another along a single axis can be expressed as
+    \[
+        W_s=\int_{x_i}^{x_f} -kx \,dx = -\frac{k}{2}\left(x_f^2-x_i^2\right)
+    \]
 
     \smallskip\noindent
-    General variable force
+    The work-kinetic energy theorem, as applied to spring force, states that the change in kinetic energy of an object in an ideal spring system is equal to the sum of the work applied and the work done by the spring.
+    \[
+        \Delta K = K_f - K_i = W_a + W_s
+    \]
+
+    \medskip\noindent
+    The work done on an object by a general variable force is the sum of the work done along each axis.
     \begin{gather*}
         W = \int_{x_i}^{x_f} F_x\,dx + \int_{y_i}^{y_f} F_y\,dy + \int_{z_i}^{z_f} F_z\,dz
     \end{gather*}
+    \noindent
+    where $a_i$ and $a_f$ are the initial and final positions with respect to a given axis, and $F_x, \, F_y,$ and $F_z$ are functions that model force along the $x,\,y,$ and $z$ axis.
 
     \mysubsection{Power}
 
     \smallskip\noindent
     Power is the rate of change of work with respect to time.
+    \[
+        P_\text{avg} = \frac{W}{\Delta t} \qquad P=\frac{dW}{dt}
+    \]
+
+    \medskip\noindent
+    Given a constant force $\vv{F}$ acting on an object, the instantaneous power exerted on that object can be expressed as
+    \[
+        \frac{d}{dt} \left[ \, W = \vv{F} \cdot \vv{d} \, \right]= \left[ \, P=\vv{F}\cdot\vv{v}=Fv\cos\phi \, \right]
+    \]
+    \noindent
+    where $\phi$ is the constant angle between force $\vv{F}$ and velocity $\vv{v}$.
+
+    \bigskip
+    \vspace{1em}
+    \begin{center}
+        \subsection*{Potential Energy}
+        \addcontentsline{toc}{section}{Potential Energy}
+    \end{center}
+    \medskip
+    \mysubsection{Conservation of Energy}
+    \smallskip\noindent
+    TODO : define conservative force
+
+    The change in potential energy of an object is defined as the negative work done on that object.
+    Using the general definition of work, we can define change in gravitational potential energy and elastic potential energy.
     \begin{gather*}
-        P=\frac{dw}{dt}                     \\
-        P=\vv{F}\cdot\vv{v}=Fv\cos\phi      \\
-        P_{avg} = \frac{W}{\Delta t}
+        \Delta U = - W = - \left[ \int_{x_i}^{x_f} F_x\,dx + \int_{y_i}^{y_f} F_y\,dy + \int_{z_i}^{z_f} F_z\,dz \right]        \\[.3em]
+        \Delta U = - \int_{y_i}^{y_f} mg \,dy = mg \left( y_f-y_i \right)   \\[.3em]
+        \Delta U = - \int_{x_i}^{x_f} -kx \,dx = \frac{k}{2} \left( x_f^2 - x_i^2 \right)
     \end{gather*}
 
 
